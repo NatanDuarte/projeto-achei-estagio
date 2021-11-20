@@ -65,6 +65,12 @@
                                             <input type="text" name="student_cep" id="cep" class="validade" required>
                                             <label for="student_cep">CEP</label>
                                         </div>
+                                        <div class="input-field col s12 m6">
+                                            <a class="btn-large grey darken-2"
+                                               target="_blank" href="https://buscacepinter.correios.com.br/app/endereco/index.php?t">
+                                                não sei meu CEP
+                                            </a>
+                                        </div>
                                     </div>
 
                                     <c:if test="${formType.equals('0')}">
