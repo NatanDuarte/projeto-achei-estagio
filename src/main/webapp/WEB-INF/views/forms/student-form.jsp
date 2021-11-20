@@ -28,12 +28,12 @@
                                         </div>
 
                                         <div class="input-field col s12 m4">
-                                            <input type="number" name="student_id" class="validade" min="0" max="99999" required>
+                                            <input type="text" name="student_id" id="student_id" class="validade" min="0" max="99999" required>
                                             <label for="student_id">ID do aluno</label>
                                         </div>
 
                                         <div class="input-field col s12 m12">
-                                            <input type="text" name="student_cpf" class="validade" required>
+                                            <input type="text" name="student_cpf" id="cpf" class="validade" required>
                                             <label for="student_cpf">CPF</label>
                                         </div>
 
@@ -43,7 +43,7 @@
                                         </div>
                                         
                                         <div class="input-field col s12 m8">
-                                            <input type="tel" name="student_phone" class="validade" required>
+                                            <input type="tel" name="student_phone" id="phone" class="validade" required>
                                             <label for="student_phone">Telefone</label>
                                         </div>
                                     </div>
@@ -150,5 +150,6 @@
         <script type="text/javascript" src="./src/js/materialize.min.js"></script>
         <script type="text/javascript" src="./src/js/init.js"></script>
         <script type="text/javascript" src="./src/js/scripts.js"></script>
+        <script type="text/javascript" src="./src/js/regex-masks.js"></script>
     </body>
 </html>

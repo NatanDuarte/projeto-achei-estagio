@@ -27,12 +27,12 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input type="text" name="company_cnpj" class="validade" required>
+                                <input type="text" id="cnpj" name="company_cnpj" class="validade" required>
                                 <label for="company_cnpj">CNPJ</label>
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input type="tel" name="company_phone" class="validade" required>
+                                <input type="tel" name="company_phone" id="phone" class="validade" required>
                                 <label for="company_phone">Telefone da Empresa</label>
                             </div>
 
@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="input-field col s12 m6">
-                                    <input type="text" name="company_cep" class="validade" required>
+                                    <input type="text" name="company_cep" id="cep" class="validade" required>
                                     <label for="company_cep">CEP</label>
                                 </div>
                         </div>
@@ -126,5 +126,6 @@
         <script type="text/javascript" src="./src/js/materialize.min.js"></script>
         <script type="text/javascript" src="./src/js/init.js"></script>
         <script type="text/javascript" src="./src/js/scripts.js"></script>
+        <script type="text/javascript" src="./src/js/regex-masks.js"></script>
     </body>
 </html>
