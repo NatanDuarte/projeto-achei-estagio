@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col s12 m12">
                                 <div class="input-field col s6 m6">
-                                    <select name="semester">
+                                    <select name="semester" required>
                                         <option value="" disabled selected>Semestre Letivo</option>
                                         <option value="2">2º semestre</option>
                                         <option value="3">3º semestre</option>

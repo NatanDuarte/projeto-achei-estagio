@@ -25,6 +25,10 @@ public class SaveInternship implements Action {
                 request.getParameter("non-regular-hours")
         );
 
+        if (workVariousDays) {
+            daysSelection = "horários variados";
+        }
+
         Internship internship = new Internship(
                 internshipStart, internshipEnd, 
                 daysSelection, workVariousDays, 
