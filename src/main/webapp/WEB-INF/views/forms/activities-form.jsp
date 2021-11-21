@@ -20,7 +20,6 @@
                                 <div class="input-field col s6 m6">
                                     <select name="semester">
                                         <option value="" disabled selected>Semestre Letivo</option>
-                                        <option value="1">1º semestre</option>
                                         <option value="2">2º semestre</option>
                                         <option value="3">3º semestre</option>
                                         <option value="4">4º semestre</option>
