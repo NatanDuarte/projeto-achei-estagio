@@ -6,19 +6,19 @@ public class Internship {
     private String internshipEnd;
     private String daysSelection;
     private boolean workVariousDays;
-    private String entryHous;
-    private String quitHous;
+    private String entryHours;
+    private String quitHours;
     private boolean nonRegularWorkHours;
     private String activities;
     private ScholarshipAid aid;
 
-    public Internship(String internshipStart, String internshipEnd, String daysSelection, boolean workVariousDays, String entryHous, String quitHous, boolean nonRegularWorkHours) {
+    public Internship(String internshipStart, String internshipEnd, String daysSelection, boolean workVariousDays, String entryHours, String quitHours, boolean nonRegularWorkHours) {
         this.internshipStart = internshipStart;
         this.internshipEnd = internshipEnd;
         this.daysSelection = daysSelection;
         this.workVariousDays = workVariousDays;
-        this.entryHous = entryHous;
-        this.quitHous = quitHous;
+        this.entryHours = entryHours;
+        this.quitHours = quitHours;
         this.nonRegularWorkHours = nonRegularWorkHours;
         this.aid = null;
     }
@@ -55,20 +55,20 @@ public class Internship {
         this.workVariousDays = workVariousDays;
     }
 
-    public String getEntryHous() {
-        return entryHous;
+    public String getEntryHours() {
+        return entryHours;
     }
 
-    public void setEntryHous(String entryHous) {
-        this.entryHous = entryHous;
+    public void setEntryHours(String entryHours) {
+        this.entryHours = entryHours;
     }
 
-    public String getQuitHous() {
-        return quitHous;
+    public String getQuitHours() {
+        return quitHours;
     }
 
-    public void setQuitHous(String quitHous) {
-        this.quitHous = quitHous;
+    public void setQuitHours(String quitHours) {
+        this.quitHours = quitHours;
     }
 
     public boolean isNonRegularWorkHours() {
