@@ -49,9 +49,9 @@ public class SaveCompany implements Action {
 
     private Company getCompanyParameters(HttpServletRequest request) {
         String name = request.getParameter("company_name");
-        String cnpj = request.getParameter("company_");
-        String phone = request.getParameter("company_");
-        String email = request.getParameter("company_");
+        String cnpj = request.getParameter("company_cnpj");
+        String phone = request.getParameter("company_phone");
+        String email = request.getParameter("company_email");
 
         return new Company(name, cnpj, phone, email);
     }
