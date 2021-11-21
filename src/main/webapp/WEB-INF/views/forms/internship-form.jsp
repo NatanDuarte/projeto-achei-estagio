@@ -20,7 +20,7 @@
                         </div>
                     </div>
 
-                    <div class="col s12 m6">
+                    <div class="col s12 m4">
                         <div class="col s12 m12">
                             <label for="internship-start">data de início</label>
                             <input type="text" name="internship-start" id="internship-start" class="datepicker grey-text">
@@ -30,27 +30,35 @@
                             <input type="text" name="internship-end" id="internship-end" class="datepicker grey-text">
                         </div>
                     </div>
-                    <div class="col s12 m6">
-                        <div class="col s6 m12">
+                    <div class="card col s12 m8">
+                        <div class="col s6 m6">
                             <label for="entry-hour">horário de entrada</label>
-                            <input type="text" class="timepicker" name="entry-hour">
+                            <input type="text" class="timepicker entry-hour" name="entry-hour">
                         </div>
-                        <div class="col s6 m12">
+                        <div class="col s6 m6">
                             <label for="">horário de saída</label>
-                            <input type="text" class="timepicker" name="quit-hour">
+                            <input type="text" class="timepicker quit-hour" name="quit-hour">
                         </div>
 
                         <div class="col s12 m6">
                             <label>
-                                <input type="checkbox" name="non-regular-hours"/>
+                                <input type="checkbox" name="non-regular-hours" class="non-regular-hours"/>
                                 <span>horários variados</span>
                             </label>
                         </div>
                     </div>
+                    <div class="card col s12 m12">
+                        <div class="col s12 m12">
+                            <div class="input-field col s12">
+                                <label for="weekly-workload">Carga horário semanal</label>
+                                <input type="text" name="weekly-workload"
+                                       disabled class="validate workload" placeholder="00 horas">
+                            </div>
+                        </div>
+                    </div>
                     <div class="col s12 m6">
                         <div class="input-field">
-                            <select multiple name="days-selection">
-                              <option value="" disabled selected>Dias da semana</option>
+                            <select multiple name="days-selection" class="weekDays">
                               <option value="segunda-feira">Segunda-feira</option>
                               <option value="terca-feira">Terça-feira</option>
                               <option value="quarta-feira">Quarta-feira</option>
@@ -59,11 +67,12 @@
                               <option value="sabado">Sábado</option>
                               <option value="domingo">Domingo</option>
                             </select>
+                            <label for="days-selection">Dias de trabalho</label>
                         </div>
 
                         <div class="col s12 m12">
                             <label>
-                                <input type="checkbox" name="various-days"/>
+                                <input type="checkbox" name="various-days" class="various-days"/>
                                 <span>dias variados</span>
                             </label>
                         </div>
@@ -91,14 +100,6 @@
                             </div>
                         </div>
                     </c:if>
-                    <div class="card col s12 m6">
-                        <div class="col s12 m12">
-                            <div class="input-field col s12">
-                                <label for="weekly-workload">Carga horário semanal</label>
-                                <input type="text" name="weekly-workload" disabled class="validate" placeholder="00 horas">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -106,7 +107,7 @@
 
             <div class="row container">
                 <div class="col right">
-                    <button type="submit" class="btn grey darken-2 waves-effect waves-orange">
+                    <button type="submit" class="btn-submit btn grey darken-2 waves-effect waves-orange">
                         enviar
                     </button>
                 </div>
@@ -120,9 +121,17 @@
         <script type="text/javascript" src="./src/js/scripts.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.datepicker');
-                var instances = M.Datepicker.init(elems, format='dd/mm/yyyy');
+                M.Datepicker.init(cash('.datepicker'), {
+                    autoClose: true, 
+                    format: 'dd/mm/yyyy', 
+                    minDate: new Date()
+                });
+                M.Timepicker.init(cash('.timepicker'), {
+                    autoClose: true, 
+                    twelveHour: false
+                });
             });
         </script>
+        <script type="text/javascript" src="./src/js/work-hours-calculator.js"></script>
     </body>
 </html>
