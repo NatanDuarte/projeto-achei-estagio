@@ -17,9 +17,10 @@ public class SaveInternship implements Action {
         String internshipStart = request.getParameter("internship-start");
         String internshipEnd = request.getParameter("internship-end");
         String daysSelection = request.getParameter("days-selection");
+        String workload = request.getParameter("weekly-workload");
         boolean workVariousDays = Boolean.parseBoolean(request.getParameter("various-days"));
         String entryHour = request.getParameter("entry-hour");
-        String quitHour = request.getParameter("entry-hour");
+        String quitHour = request.getParameter("quit-hour");
         boolean nonRegularWorkHours = Boolean.parseBoolean(
                 request.getParameter("non-regular-hours")
         );
@@ -29,6 +30,7 @@ public class SaveInternship implements Action {
                 daysSelection, workVariousDays, 
                 entryHour, quitHour, nonRegularWorkHours
         );
+        internship.setWorkload(workload);
 
         HttpSession session = request.getSession();
         String formType = (String) session.getAttribute("formType");

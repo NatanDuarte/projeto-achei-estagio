@@ -21,6 +21,7 @@ const calculateWeeklyWorkload = () => {
     const weekDays = [...weekDaysInput.options].filter(option => 
         option.selected).map(option => option.value);
     const daysOfWork = weekDays.length;
+    weekDaysInput.value = weekDays;
 
     const entryHours = getHourNumber(entryHourInput);
     const quitHours = getHourNumber(quitHourInput);

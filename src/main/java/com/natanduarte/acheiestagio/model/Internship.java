@@ -8,6 +8,7 @@ public class Internship {
     private boolean workVariousDays;
     private String entryHours;
     private String quitHours;
+    private String workload;
     private boolean nonRegularWorkHours;
     private String activities;
     private ScholarshipAid aid;
@@ -93,5 +94,13 @@ public class Internship {
 
     public void setAid(ScholarshipAid aid) {
         this.aid = aid;
+    }
+
+    public String getWorkload() {
+        return workload;
+    }
+
+    public void setWorkload(String workload) {
+        this.workload = workload;
     }
 }
