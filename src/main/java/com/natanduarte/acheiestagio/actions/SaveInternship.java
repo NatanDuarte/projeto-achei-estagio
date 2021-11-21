@@ -16,7 +16,7 @@ public class SaveInternship implements Action {
 
         String internshipStart = request.getParameter("internship-start");
         String internshipEnd = request.getParameter("internship-end");
-        String daysSelection = request.getParameter("days-selection");
+        String daysSelection = request.getParameter("days-of-work");
         String workload = request.getParameter("weekly-workload");
         boolean workVariousDays = Boolean.parseBoolean(request.getParameter("various-days"));
         String entryHour = request.getParameter("entry-hour");

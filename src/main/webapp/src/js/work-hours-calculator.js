@@ -21,7 +21,8 @@ const calculateWeeklyWorkload = () => {
     const weekDays = [...weekDaysInput.options].filter(option => 
         option.selected).map(option => option.value);
     const daysOfWork = weekDays.length;
-    weekDaysInput.value = weekDays;
+    const daysOfWorkInput = document.querySelector('.daysOfWork');
+    daysOfWorkInput.value = weekDays.join(', ');
 
     const entryHours = getHourNumber(entryHourInput);
     const quitHours = getHourNumber(quitHourInput);
@@ -33,13 +34,17 @@ const calculateWeeklyWorkload = () => {
 
     const MAX_WORKLOAD = 30;
 
+    const workloadFront = document.querySelector('.workload-front');
+
     if (nonRegularHoursCheck.checked || variousDaysCheck.checked) {
         workloadInput.value = `${MAX_WORKLOAD} horas`;
+        workloadFront.innerHTML = `${MAX_WORKLOAD} horas`;
         return;
     }
 
     btnSubmit.disabled = workload > MAX_WORKLOAD ? true : false;
     workloadInput.value = `${workload} horas`;
+    workloadFront.innerHTML = `${workload} horas`;
 };
 
 

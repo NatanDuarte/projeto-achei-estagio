@@ -50,9 +50,9 @@
                     <div class="card col s12 m12">
                         <div class="col s12 m12">
                             <div class="input-field col s12">
-                                <label for="weekly-workload">Carga horário semanal</label>
-                                <input type="text" name="weekly-workload"
-                                       disabled class="validate workload" placeholder="00 horas">
+                                <span class="card-title">Carga horária semanal</span>
+                                <p class="workload-front"></p>
+                                <input type="hidden" name="weekly-workload" class="workload">
                             </div>
                         </div>
                     </div>
@@ -68,6 +68,7 @@
                               <option value="domingo">Domingo</option>
                             </select>
                             <label for="days-selection">Dias de trabalho</label>
+                            <input type="hidden" name="days-of-work" class="daysOfWork">
                         </div>
 
                         <div class="col s12 m12">

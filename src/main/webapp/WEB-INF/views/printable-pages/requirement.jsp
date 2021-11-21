@@ -41,52 +41,52 @@
 
             <div class="row">
                 <div class="col s12 m12">
-                    <span><b>Nome:</b> ${Student.name}</span>
+                    <span><b>Nome:</b> ${student.name}</span>
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Endereço:</b> ${Student.address.street}</span>
+                    <span><b>Endereço:</b> ${student.address.street}</span>
                 </div>
 
                 <div class="col s4 m4">
-                    <span><b>Bairro:</b> ${Student.address.district}</span>
+                    <span><b>Bairro:</b> ${student.address.district}</span>
                 </div>
                 <div class="col s4 m4">
-                    <span><b>Cidade:</b> ${Student.address.city}</span>
+                    <span><b>Cidade:</b> ${student.address.city}</span>
                 </div>
                 <div class="col s4 m4">
-                    <span><b>CEP:</b> ${Student.address.cep}</span>
+                    <span><b>CEP:</b> ${student.address.cep}</span>
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Telefone:</b> ${Student.phone}</span>
+                    <span><b>Telefone:</b> ${student.phone}</span>
                 </div>
 
                 <c:if test="${formType.equals('0')}">
                     <div class="col s6 m6">
-                        <span><b>Curso:</b> ${Student.course}</span>
+                        <span><b>Curso:</b> ${student.course}</span>
                     </div>
                 </c:if>
                 <div class="col s6 m6">
-                    <span><b>ID:</b> ${Student.id}</span>
+                    <span><b>ID:</b> ${student.id}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>CPF:</b> ${Student.cpf}</span>
+                    <span><b>CPF:</b> ${student.cpf}</span>
                 </div>
                 <div class="col s6 m6">
-                    <span><b>Data de nascimento:</b> ${Student.birthDate}</span>
+                    <span><b>Data de nascimento:</b> ${student.birthDate}</span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col s12 m12">
-                    <span><b>Nome da disciplina:</b> ${Student.phone}</span>
+                    <span><b>Nome da disciplina:</b> ${student.subject}</span>
                 </div>
 
                 <c:if test="${formType.equals('0')}">
                     <div class="col s12 m12">
-                        <span><b>Professor Orientador do Estágio (Unisagrado):</b> ${Student.phone}</span>
+                        <span><b>Professor Orientador do Estágio (Unisagrado):</b> ${student.teacherAdvisor}</span>
                     </div>
                 </c:if>
             </div>
@@ -94,41 +94,37 @@
 
             <div class="row">
                 <div class="col s12 m12">
-                    <span><b>Razão Social da Unidade Concedente:</b> ${Company.name}</span>
+                    <span><b>Razão Social da Unidade Concedente:</b> ${company.name}</span>
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Endereço:</b> ${Company.address.street}</span>
+                    <span><b>Endereço:</b> ${company.address.street}</span>
                 </div>
 
                 <div class="col s4 m4">
-                    <span><b>Bairro:</b> ${Company.address.district}</span>
+                    <span><b>Bairro:</b> ${company.address.district}</span>
                 </div>
                 <div class="col s4 m4">
-                    <span><b>Cidade:</b> ${Company.address.city}</span>
+                    <span><b>Cidade:</b> ${company.address.city}</span>
                 </div>
                 <div class="col s4 m4">
-                    <span><b>CEP:</b> ${Company.address.cep}</span>
-                </div>
-
-                <div class="col s6 m6">
-                    <span><b>Telefone:</b> ${Company.phone}</span>
+                    <span><b>CEP:</b> ${company.address.cep}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>CNPJ:</b> ${Company.cnpj}</span>
+                    <span><b>Telefone:</b> ${company.phone}</span>
+                </div>
+
+                <div class="col s6 m6">
+                    <span><b>CNPJ:</b> ${company.cnpj}</span>
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Nome do representante legal:</b> ${Company.representativeName}</span>
+                    <span><b>Nome do representante legal:</b> ${company.representativeName}</span>
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Cargo/Função:</b> ${Company.representativeOffice}</span>
-                </div>
-
-                <div class="col s6 m6">
-                    <span><b>RG:</b> </span>
+                    <span><b>Cargo/Função:</b> ${company.representativeOffice}</span>
                 </div>
 
                 <div class="col s6 m6">
@@ -136,29 +132,29 @@
                 </div>
 
                 <div class="col s12 m12">
-                    <span><b>Nome do supervisor da Unidade Concedente:</b> </span>
+                    <span><b>Nome do supervisor da Unidade Concedente:</b> ${company.supervisorName}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>Cargo/Função:</b> </span>
+                    <span><b>Cargo/Função:</b> ${company.supervisorOffice}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>E-Mail:</b> </span>
+                    <span><b>E-Mail:</b> ${company.supervisorEmail}</span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col s6 m6">
-                    <span><b>Perí­odo do estágio:</b> de - a -</span>
+                    <span><b>Perí­odo do estágio:</b> de ${internship.internshipStart} a ${internship.internshipEnd}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>horário:</b></span>
+                    <span><b>horário:</b> ${internship.entryHours} - ${internship.quitHours}</span>
                 </div>
 
                 <div class="col s6 m6">
-                    <span><b>Carga horária semanal:</b> - horas</span>
+                    <span><b>Carga horária semanal:</b> ${internship.workload}</span>
                 </div>
             </div>
         </div>

@@ -48,7 +48,7 @@ public class SaveStudent implements Action {
 
         String birthDate = request.getParameter("birth_date");
         Student student = new Student(name, id, cpf, birthDate, address);
-        student.setPhone(request.getParameter("phone"));
+        student.setPhone(request.getParameter("student_phone"));
 
         return student;
     }
