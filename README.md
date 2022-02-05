@@ -6,7 +6,7 @@ O projeto consiste um uma aplicação web responsiva usando Java para criar um f
 
 A interface foi criada com tecnologias base da web (HTML, CSS e JavaScript) em conjunto com a biblioteca do Materialize da Google.
 
-![imagem da aplicação](https://imgur.com/gallery/TaHPlg5)
+![imagem da aplicação](https://i.imgur.com/MSekkGE.png)
 
 ### confira o [vídeo de demonstração](https://youtu.be/Sf1j-IjJ6u4).
 
